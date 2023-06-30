@@ -1,0 +1,134 @@
+:root{
+  --clr-transparent: hsl(215, 51%, 70%);
+  --clr-hover: hsl(178, 100%, 50%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: hsl(217, 54%, 11%);
+  font-family: 'Outfit', sans-serif;
+}
+
+.container{
+  background: hsl(216, 50%, 16%);
+  margin: 5em 2em;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.nft{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.nft:hover {
+  background-image: url(images/icon-view.svg);
+  background-color: var(--clr-hover);
+}
+
+h1{
+  color: var(--clr-white);
+  font-size: 1.3em;
+}
+
+h1:hover{
+  color: var(--clr-hover);
+}
+p{
+  color: var(--clr-transparent);
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.trade{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+
+.trade img{
+  padding-right: 5px;
+}
+
+.left, 
+.right{
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  padding-bottom: 15px; 
+}
+
+.left{
+  color: var(--clr-hover);
+  font-weight: 600;
+}
+
+.right{
+  color: var(--clr-transparent);
+}
+
+.right:hover{
+  color: var(--clr-hover);
+}
+.creator-section{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.avatar{
+  width: 30px;
+  border: 2px solid #F4F8FA;
+  border-radius: 30px;
+}
+.creator{
+  color: var(--clr-transparent);
+  padding-left: 1em;
+}
+
+.creator_name{
+  color: var(--clr-white);
+}
+
+.creator_name:hover{
+  color: var(--clr-hover);
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+  color: var(--clr-transparent);
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 720px) {
+  body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    padding: 25px;
+    width: 30%;
+  }
+  
+  .left,
+  .right {
+    padding-bottom: 20px;
+  }
+  
+  .attribution{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 1em;
+  }
+}
