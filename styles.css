@@ -4,12 +4,27 @@
   --clr-white: hsl(0, 0%, 100%);
 }
 
-body{
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+
+body{
   background: hsl(217, 54%, 11%);
   font-family: 'Outfit', sans-serif;
+  max-width: 375px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container{
@@ -32,11 +47,13 @@ body{
 h1{
   color: var(--clr-white);
   font-size: 1.3em;
+  margin: 1em 0;
 }
 
 h1:hover{
   color: var(--clr-hover);
 }
+
 p{
   color: var(--clr-transparent);
   font-size: 1em;
@@ -47,6 +64,7 @@ p{
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid hsl(215, 32%, 27%);
+  margin-top: 1em;
 }
 
 .trade img{
@@ -100,8 +118,10 @@ p{
 
 .attribution { 
   font-size: 11px; 
-  text-align: center; 
   color: var(--clr-transparent);
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 1em;
 }
 
 .attribution a { 
@@ -110,11 +130,7 @@ p{
 
 @media (min-width: 720px) {
   body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    max-width: 1440px;
   }
   .container {
     padding: 25px;
@@ -126,9 +142,4 @@ p{
     padding-bottom: 20px;
   }
   
-  .attribution{
-    position: fixed;
-    bottom: 0;
-    margin-bottom: 1em;
-  }
 }
